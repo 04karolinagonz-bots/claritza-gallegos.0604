@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 80%;
+    margin: 0;
+    padding: 0; 
+    background-color: #480404;
+    color: #fff;
+}
+
+.cuadro {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(62, 61, 61, 0.85); 
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 1000px;
+    width: 90%; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
+}
+
+
+.cuadro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.foto-principal {
+    margin-top: 20px;
+    width: 280px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(18, 17, 17, 0.2);
+}
+
+.foto-principal2 {
+    margin-top: 20px;
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(18, 18, 16, 0.5);
+    border: 2px solid rgba;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: rgba;
+    text-shadow: 2px 2px 6px #000;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.amigos, .familia, .pareja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.miembro {
+    text-align: center;
+    width: 120px;
+    background-color: rgba(16, 14, 14, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.miembro:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.miembro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px; 
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.miembro p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+}
+
+.actividades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .cuadro {
+        width: 90%;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .miembro {
+        width: 45%;
+    }
+
+    .foto-principal,
+    .foto-principal2 {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+
